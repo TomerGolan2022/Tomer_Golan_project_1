@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks</title>
+    <link rel="icon" href="./images/notebg.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./css/myStyle.css">
+
+</head>
+
+<body class="font" style="background-image: url(./images/tile.jpg);">
+
+    <div id="buttons" class="center" style="width: 100%;">
+        <button onclick="displayMyTasks()" class="btn btn-secondary">My Tasks</button>
+        <button onclick="clearList()" class="btn btn-danger" style="float: right;">Delete All Tasks</button>
+        <br><br>
+    </div>
+
+
+    <main class="animate__animated animate__fadeInDown">
+        <div id="title">
+            <a href="./index.html"><img src="./images/title.png" class="center"></a>
+        </div>
+    </main>
+
+        <main class="animate__animated animate__fadeInDown">
+            <div id="form" class="form">
+                <input type="text" id="taskText" style="margin: 5px;  width: 480px;" placeholder="New Task"><br>
+                <input type="date" id="taskDate" style="margin: 5px;"><span>(completion date)</span><br>
+                <input type="time" id="taskTime" style="margin: 5px;"><span>(completion time)</span>
+                <br><br>
+                <button onclick="saveTask()" class="btn btn-success">Save</button>
+                <button onclick="clearForm()" class="btn btn-secondary" style="float: right;">Reset</button>
+            </div>
+        </main>
+   
+
+    <div id="table" class="row row-cols-1 row-cols-md-6 g-6" style="padding: 15px;"></div>
+
+    <script src="./js/myCode.js"></script>
+
+</body>
